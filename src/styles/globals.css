@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .btn-primary {
+        @apply p-4 drop-shadow-2xl font-PLayFair duration-500  z-[1] md:hover:translate-x-1
+    }
+    .btn-primary__after{
+        @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1 after:border-r   after:border-b after:border-gray-600   md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-[25%] md:hover:after:translate-y-[25%] after:duration-500 after:z-[-1] after:animate-pulse;
+    }
+    .btn-primary__before {
+        @apply before:absolute before:h-full before:w-full before:left-2 before:top-1 before:border-t before:border-l before:border-gray-600   md:before:translate-x-0 md:before:translate-y-0  md:hover:before:-translate-x-[25%] md:hover:before:-translate-y-[25%] before:duration-500  before:z-[-1] before:animate-pulse;
+
+    }
+}
+
+@font-face {
+    font-family: "PLayFair";
+    src: local('RedHatText'), url("../fonts/PlayfairDisplay-MediumItalic.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
