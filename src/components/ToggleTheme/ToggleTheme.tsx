@@ -9,10 +9,9 @@ const ToggleTheme =  () => {
     const handleTheme = () => {
         setTheme(currentTheme === 'dark' ? 'light' : 'dark')
     }
-         return  (<FancyButton  onClick={handleTheme}  name={'light'}>
-             Change theme
-
-    </FancyButton>)
+         return  <FancyButton  onClick={handleTheme}  name={'light'}>
+             Change Toggle
+    </FancyButton>
 
 
 }

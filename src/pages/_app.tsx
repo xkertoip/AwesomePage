@@ -4,6 +4,7 @@ import type { AppType } from "next/app";
 import { trpc } from "../utils/trpc";
 import {ThemeProvider} from "next-themes";
 import Head from "next/head";
+import Transition from "../components/Transition";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -19,7 +20,11 @@ const MyApp: AppType = ({ Component, pageProps }) => {
                                       <meta name="theme-color" content="#ffffff"/>
           </Head>
           <ThemeProvider attribute="class" enableSystem={true}>
-              <Component {...pageProps}/>
+
+             <Transition>
+                 <Component {...pageProps}/>
+             </Transition>
+
           </ThemeProvider>
 
       </>
