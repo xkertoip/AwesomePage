@@ -14,6 +14,21 @@ const Home: NextPage = () => (
 
       <main>
           <Hero/>
+          <div id={'about'}>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+              siema<br/>
+          </div>
           <div className={'text-center'}>
              <ToggleTheme/>
           </div>
