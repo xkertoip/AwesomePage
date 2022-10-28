@@ -5,7 +5,7 @@
 
 @layer components {
     .btn-primary {
-        @apply p-4 drop-shadow-2xl font-PLayFair duration-500  z-[1] md:hover:translate-x-1
+        @apply p-4 drop-shadow-2xl text-2xl duration-500  z-[1] md:hover:translate-x-1
     }
     .btn-primary__after{
         @apply after:absolute after:h-full  after:w-full after:-left-2 after:-top-1 after:border-r   after:border-b after:border-gray-600   md:after:translate-x-0 md:after:translate-y-0 md:hover:after:translate-x-4 md:hover:after:translate-y-4 after:duration-500 after:z-[-1] after:animate-pulse;
@@ -14,7 +14,7 @@
         @apply before:absolute before:h-full before:w-full before:left-2 before:top-1 before:border-t before:border-l before:border-gray-600   md:before:translate-x-0 md:before:translate-y-0  md:hover:before:-translate-x-4 md:hover:before:-translate-y-4 before:duration-500  before:z-[-1] before:animate-pulse;
     }
     .title-big {
-        @apply text-6xl sm:text-8xl md:text-9xl font-PLayFair
+        @apply text-6xl sm:text-8xl md:text-9xl
     }
 /*    .interactive-title {
         @apply
@@ -25,11 +25,17 @@
     .section-container {
         @apply px-4 md:px-[10%]
     }
+    .section-indicator {
+        @apply uppercase
+    }
     .section {
         @apply pb-16
     }
     body{
-        @apply bg-neutral-300 dark:bg-zinc-900
+        @apply bg-neutral-300 dark:bg-zinc-900 font-PLayFair
+    }
+    *, :before, :after {
+        @apply text-zinc-900 dark:text-neutral-300 font-PLayFair
     }
 }
 

@@ -16,7 +16,6 @@ const Home: NextPage = () => (
           <Hero/>
           <div className={'text-center'}>
              <ToggleTheme/>
-
           </div>
 
       </main>
