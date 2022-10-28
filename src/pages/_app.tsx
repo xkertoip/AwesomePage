@@ -4,7 +4,9 @@ import { trpc } from "../utils/trpc";
 import {ThemeProvider} from "next-themes";
 import Head from "next/head";
 import Transition from "../components/Transition";
-import SmoothScroll from "../components/SmoothScroll/SmoothScroll";
+import SmoothScroll from "../components/SmoothScroll";
+import MenuProvider from "../components/MenuProvider";
+import Menu from "../components/Menu";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -20,13 +22,14 @@ const MyApp: AppType = ({ Component, pageProps }) => {
                                       <meta name="theme-color" content="#ffffff"/>
           </Head>
           <ThemeProvider attribute="class" enableSystem={true}>
+              <MenuProvider>
+                  <Menu/>
             <SmoothScroll>
                 <Transition>
                     <Component {...pageProps}/>
                 </Transition>
-
             </SmoothScroll>
-
+              </MenuProvider>
           </ThemeProvider>
 
       </>
