@@ -42,7 +42,7 @@ const Hero = () => {
                         creative
                     </span> Developer, you name it.
                         Lucky owner of 4 legs beast called Bobik. <Link href={'/about'}><a className={'underline animate-pulse'}>
-                        Let's meet
+                        Let&apos;s meet
                     </a></Link>!
                     </p>
 
