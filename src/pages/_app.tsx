@@ -1,10 +1,10 @@
-// src/pages/_app.tsx
 import "../styles/globals.css";
 import type { AppType } from "next/app";
 import { trpc } from "../utils/trpc";
 import {ThemeProvider} from "next-themes";
 import Head from "next/head";
 import Transition from "../components/Transition";
+import SmoothScroll from "../components/SmoothScroll/SmoothScroll";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -20,10 +20,12 @@ const MyApp: AppType = ({ Component, pageProps }) => {
                                       <meta name="theme-color" content="#ffffff"/>
           </Head>
           <ThemeProvider attribute="class" enableSystem={true}>
+            <SmoothScroll>
+                <Transition>
+                    <Component {...pageProps}/>
+                </Transition>
 
-             <Transition>
-                 <Component {...pageProps}/>
-             </Transition>
+            </SmoothScroll>
 
           </ThemeProvider>
 
